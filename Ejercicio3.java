@@ -38,3 +38,25 @@ public class Ejercicio3 {
     }
     
 }
+/*public class Euler {
+    public static void main(String[] args) {
+        largestPrime(600851475143L);
+    }
+
+    private static void largestPrime(long n) {
+        long currDivisor = 2L;
+        long largestPossible = (long) Math.sqrt(n);
+        while (n > 1) {
+            if (n % currDivisor == 0) {
+                n = n / currDivisor;
+            } else if (currDivisor > largestPossible) {
+                break;
+            } else if (currDivisor >= 3) {
+                currDivisor += 2;
+            } else {
+                currDivisor += 1;
+            }
+        }
+        System.out.println(currDivisor);
+    }
+} */
