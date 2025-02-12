@@ -6,52 +6,30 @@ public class Ejercicio4 {
     //derecha a izquierda. Ej.→ 9009
 
     //Hago una funcion que compruebe si los numeros son palindromos
+    static boolean esPalindromo(int numero){
+        int original=numero;
+        int reverso=0;
+        while(numero !=0){
+            int rem=numero%10;
+            reverso=reverso*10+rem;
+            numero=numero/10;
+        }
+        if(reverso==original) return true;
+        return false;
 
-    private static boolean numeroPalindromo(int numero){
-        int numeroOriginal = numero;
-        int numeroReves=0;
-
-        while(numeroOriginal>0){
-            int ultimoDigito = numeroOriginal % 10;
-            numeroReves=(numeroReves*10)+ultimoDigito;//Revisar logica del numeroReves
-            numero/=10;
-
-    }
-        return numero==numeroReves;
     }
 
     public static void main(String[] args) {
-        //declaro variables
-        System.out.println("mostrar mensaje por consola");
-        int palindromoMasGrande=0;
-        int factor1=0;
-        int factor2=0;
+        int resultado=0;
+        int actual=0;
 
-        for (int i = 999; i >= 100; i--) {
-            for (int j = i; j >= 100; j--) { // Comenzar j desde i para evitar duplicados
-                int producto = i * j;
-
-                if (producto > palindromoMasGrande & numeroPalindromo(producto)) {
-                    palindromoMasGrande = producto;
-                    factor1 = i;
-                    factor2 = j;
-                }
+        for(int i=100;i<=900;i++){
+            for(int j=100;j<=900;j++){
+                resultado=i*j;
+                if(esPalindromo(resultado)) if(resultado>actual) actual=resultado;
             }
         }
-
-        if(palindromoMasGrande >0){
-            System.out.println("El palindromo mas grande de 3 digitos es → "+palindromoMasGrande);
-            System.out.println("La combiancion de numeros es "+factor1+" y "+factor2);
-        }else
-            System.out.println("No se encontraron palindromos");
-
-
-
-
-
-
-
-
+        System.out.println(actual);
         }
     }
 
