@@ -13,7 +13,7 @@ public class EjercicioArray1 {
         int mayor=Integer.MIN_VALUE;
         int menor=Integer.MAX_VALUE;
 
-        int vector[] = new int[10];
+        int[] vector = new int[10];
 
         for (int i = 0; i < vector.length; i++) {
             vector[i] = sc.nextInt();
