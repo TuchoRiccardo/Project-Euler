@@ -9,30 +9,20 @@ public class EjercicioArray2 {
 
 
         static boolean esPrimo(int numero) {
-            if(numero <= 1) return false;
-
-            int contador=2;
-            boolean primo=true;
-            while (primo && contador <= Math.sqrt(numero)) {
-                if(numero % contador == 0) primo=false;
-
-                contador++;
-            }
-            return primo;
+            return Ejercicio7.esPrimo(numero);
         }
 
     public static void main(String[] args) {
         Random rand = new Random();
         int [] numeros = new int[20];
         List<Integer> primos = new ArrayList<Integer>();
-        int contador=0;
+        //int contador=0;
 
         System.out.println("Se crea el primer array");
         for (int i = 0; i < numeros.length; i++) {
             numeros[i] = rand.nextInt(100);
         }
 
-        contador=0;
         for(int num : numeros) {
             if(esPrimo(num)) {
                primos.add(num);
