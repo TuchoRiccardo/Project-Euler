@@ -1,5 +1,5 @@
 import java.util.ArrayList;
-import java.util.List;
+
 import java.util.Random;
 
 public class EjercicioArray2 {
@@ -15,7 +15,7 @@ public class EjercicioArray2 {
     public static void main(String[] args) {
         Random rand = new Random();
         int [] numeros = new int[20];
-        List<Integer> primos = new ArrayList<Integer>();
+        ArrayList<Integer> primos = new ArrayList<>();
         //int contador=0;
 
         System.out.println("Se crea el primer array");
