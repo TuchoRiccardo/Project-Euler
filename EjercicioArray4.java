@@ -14,7 +14,7 @@ public class EjercicioArray4 {
         int exponenteCuadrado=2;
         int exponenteCubo=3;
         for (int i = 0; i < 10; i++) {
-            array[i] = rand.nextInt(11);
+            array[i] = rand.nextInt(10)+1;
         }
         for (int i = 0; i < 10; i++) {
 
