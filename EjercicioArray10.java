@@ -6,29 +6,33 @@ public class EjercicioArray10 {
      pida valores para ‘vector1’ y ‘vector2’
     y calcule vector3=vector1+vector2.*/
 
+    static void llenarArrays(Scanner sc,int [] vector, String mensaje){
+        System.out.println(mensaje);
+        for(int i=0;i<vector.length;i++){
+            vector[i]=sc.nextInt();
+        }
+
+    }
+
+
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        int [] vector1 = new int[5];
-        int [] vector2 = new int[5];
-        int [] vector3 = new int[5];
-        int numero=0;
+        final int tamanio=5;
+        int [] vector1 = new int[tamanio];
+        int [] vector2 = new int[tamanio];
+        int [] vector3 = new int[tamanio];
+        //int numero=0;
 
-        System.out.println("Ingrese numeros para el primer array");
-        for(int i=0; i<5; i++){
-            vector1[i] = sc.nextInt();
-        }
-        System.out.println("Ingrese numeros para el segundo array");
-        for(int i=0; i<5; i++){
-            vector2[i] = sc.nextInt();
-        }
+       llenarArrays(sc,vector1,"Llenar Array 1");
+       llenarArrays(sc,vector2,"Llenar Array 2");
 
-        System.out.println("Numeros del primer array: "+ Arrays.toString(vector1));
-        System.out.println("Numeros del segundo array: "+ Arrays.toString(vector2));
+        System.out.println("Numeros dentro del array 1: "+Arrays.toString(vector1));
+        System.out.println("Numeros dentro del array 2: "+Arrays.toString(vector2));
 
-        for (int i=0; i<5; i++){
-            vector3[i] = vector1[i] + vector2[i];
+        for (int i = 0; i < vector3.length; i++) {
+            vector3[i]=vector1[i]+vector2[i];
         }
-        System.out.println("Numeros del primer array: "+ Arrays.toString(vector3));
+        System.out.println("Suma de arrays enteros "+Arrays.toString(vector3));
 
     }
 }
