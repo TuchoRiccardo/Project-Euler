@@ -11,7 +11,7 @@ que aparece dicho número en el vector e imprimir el resultado. */
         int numeros[]={2,4,5,7,7,7,20,25,98,98,70,7,55};
         int buscar=0;
         int cont=0;
-        int imp=1;
+        
         System.out.println("Por favor ingrese un numero para buscar en el arreglo");
         buscar=sc.nextInt();
         
@@ -24,10 +24,7 @@ que aparece dicho número en el vector e imprimir el resultado. */
             break;
             
         }
-        while(imp>0){
-        System.out.println("Cantidad de veces que el numero se repite en el array: "+cont);
-        imp--;
-        }
+      System.out.println("Cantidad de veces que el numero se repite en el array: "+cont);
         
                 
         
