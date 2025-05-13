@@ -14,6 +14,7 @@ igual que 5 y la cantidad de elementos que se han sumado. Imprimir los resultado
             }
         }
         System.out.println("Suma de elementos mayores o igual a 5: "+suma);
+     
         System.out.println("Cantidad de elementos sumados: "+cantElementos);
     }
     
