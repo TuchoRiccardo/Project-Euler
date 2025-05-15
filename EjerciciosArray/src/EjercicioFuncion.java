@@ -24,8 +24,8 @@ int exponente=3;
 int base=5;
 int resultado=0;
         for (int i = 1; i <=exponente; i++) {
-            resultado=base;
-            base*=resultado;
+            
+            
         }
        
         System.out.println(resultado);
